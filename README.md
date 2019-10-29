@@ -1,10 +1,12 @@
 
 ## Debian10常用软件包
    root用户下安装
+
 #apt-get -y update && apt-get -y install unzip zip wget curl mc nano sudo ufw socat ntp ntpdate gcc git
 
 ## CentOS8常用软件包
    root用户下安装
+
 #yum -y update && yum -y install unzip zip wget nano sudo curl firewalld redhat-lsb epel-release socat gcc git
 
 # 收集各类一键脚本，所有权利归原作者所有。
