@@ -1,9 +1,11 @@
 
-## debian10常用软件包
+## Debian10常用软件包
    root用户下安装
+#apt-get -y update && apt-get -y install unzip zip wget curl mc nano sudo ufw socat ntp ntpdate gcc git
 
-#apt-get update && apt-get install unzip zip wget curl nano sudo ufw socat ntp ntpdate gcc git cron
-
+## CentOS8常用软件包
+   root用户下安装
+#yum -y update && yum -y install unzip zip wget nano sudo curl firewalld redhat-lsb epel-release socat gcc git
 
 # 收集各类一键脚本，所有权利归原作者所有。
 除了官网一键代码，逗比SSR233等各路大神的大多数原版一键脚本已删贴走人隐居甚至失效。
