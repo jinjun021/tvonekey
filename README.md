@@ -11,12 +11,15 @@
 
 ##加速優化（效果咋樣，見仁見智）
 BBR
+
 #wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 TLS开启OSCP
+
 #openssl s_client -connect aws007.ml:443 -status -tlsextdebug < /dev/null 2>&1 | grep -i "OCSP response"
 
 TCP fastopen
+
 #echo 3 > /proc/sys/net/ipv4/tcp_fastopen
 
 
