@@ -9,7 +9,7 @@
 
 #yum -y update && yum -y install unzip zip wget nano sudo curl firewalld redhat-lsb epel-release socat gcc git
 
-##加速優化（效果咋樣，見仁見智）
+## 加速優化（效果咋樣，見仁見智）
 BBR
 
 #wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
