@@ -10,7 +10,7 @@
 #yum -y update && yum -y install unzip zip wget nano sudo curl firewalld redhat-lsb epel-release socat gcc git
 
 ## 加速優化（效果咋樣，見仁見智）
-BBR
+原版BBR加速
 
 修改系统变量
 
