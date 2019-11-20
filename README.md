@@ -11,13 +11,21 @@
 
 ## 加速優化（效果咋樣，見仁見智）
 BBR
+
 修改系统变量
+
 #echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+
 #echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+
 保存生效
+
 #sysctl -p
+
 查看内核是否已开启BBR
+
 #lsmod | grep bbr
+
 返回值有 tcp_bbr 模块即说明 bbr 已启动
 
 TLS开启OSCP
