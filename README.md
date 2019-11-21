@@ -37,8 +37,8 @@ TCP fastopen
 #echo 3 > /proc/sys/net/ipv4/tcp_fastopen
 
 
-# 收集各类一键脚本，所有权利归原作者所有。
-除了官网一键代码，逗比SSR233等各路大神的大多数原版一键脚本已删贴走人隐居甚至失效。
+# 收集一键脚本，所有权利归原作者所有。
+除了官网一键代码，各路大神的大多数原版一键脚本已删贴走人隐居甚至失效。
 
 ## 独立版官方克隆脚本
 #bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/go.sh)
