@@ -30,7 +30,7 @@
 
 TLS开启OSCP
 
-#openssl s_client -connect aws007.ml:443 -status -tlsextdebug < /dev/null 2>&1 | grep -i "OCSP response"
+#openssl s_client -connect yourzzz.ml:443 -status -tlsextdebug < /dev/null 2>&1 | grep -i "OCSP response"
 
 TCP fastopen
 
