@@ -123,6 +123,11 @@ basic_optimization(){
 
 }
 
+get_ip() {
+	ip=$(curl -s https://ipinfo.io/ip)
+	[[ -z $ip ]] && ip=$(curl -s https://api.ipify.org)
+		
+}
 modify_port_UUID(){
     
 	PORT=$(shuf -i20001-65535 -n1)
@@ -197,16 +202,16 @@ vmess_qr_config(){
     cat >/etc/v2ray/vmess_qr.json <<-EOF
     {
         "v": "2",
-        "ps": "wulabing_${domain}",
-        "add": "${domain}",
+        "ps": "wulabing_${ip}",
+        "add": "${ip}",
         "port": "${PORT}",
         "id": "${UUID}",
         "aid": "${alterID}",
-        "net": "mKCP",
+        "net": "kcp",
         "type": "none",
-        "host": "${domain}",
-        "path": "/${camouflage}/",
-        "tls": "tls"
+        "host": "",
+        "path": "",
+        "tls": ""
     }
 EOF
 
@@ -222,11 +227,11 @@ show_information(){
 
     echo -e "${OK} ${Green} V2ray+mKCP 安装成功" >./v2ray_info.txt
     echo -e "${Red} V2ray 配置信息 ${Font}" >>./v2ray_info.txt
-    echo -e "${Red} 地址（address）:${Font} ${domain} " >>./v2ray_info.txt
+    echo -e "${Red} 地址（address）:${Font} ${ip} " >>./v2ray_info.txt
     echo -e "${Red} 端口（port）：${Font} ${PORT} " >>./v2ray_info.txt
     echo -e "${Red} 用户id（UUID）：${Font} ${UUID}" >>./v2ray_info.txt
     echo -e "${Red} 额外id（alterId）：${Font} ${alterID}" >>./v2ray_info.txt
-    echo -e "${Red} 加密方式（security）：${Font} 自适应 " >>./v2ray_info.txt
+    echo -e "${Red} 加密方式（security）：${Font} aes-128-gcm " >>./v2ray_info.txt
     echo -e "${Red} 传输协议（network）：${Font} kcp " >>./v2ray_info.txt
     echo -e "${Red} 伪装类型（type）：${Font} none " >>./v2ray_info.txt
     echo -e "${Red} 路径（不要落下/）：${Font}  " >>./v2ray_info.txt
