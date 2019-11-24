@@ -108,11 +108,11 @@ dependency_install(){
 }
 basic_optimization(){
     # BBR
-	judge "安装BBR"
+	
 	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
     echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 	sysctl -p
-	
+	judge "安装BBR"
 	# 最大文件打开数
     sed -i '/^\*\ *soft\ *nofile\ *[[:digit:]]*/d' /etc/security/limits.conf
     sed -i '/^\*\ *hard\ *nofile\ *[[:digit:]]*/d' /etc/security/limits.conf
