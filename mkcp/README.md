@@ -47,7 +47,9 @@
 #!/bin/bash
 
 apt-get -y update
+
 apt-get -y install unzip zip wget curl  nano sudo ufw socat ntp ntpdate gcc git
+
 bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
 
 ### 启动方式
