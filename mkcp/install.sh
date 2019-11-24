@@ -100,16 +100,20 @@ dependency_install(){
     ${INS} -y install bc
     judge "安装 bc"
 
-    ${INS} -y install unzip
-    judge "安装 unzip"
+   
 
-    ${INS} -y install qrencode
-    judge "安装 qrencode"
+    
     
 
 }
 basic_optimization(){
-    # 最大文件打开数
+    # BBR
+	judge "安装BBR"
+	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+    echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+	sysctl -p
+	
+	# 最大文件打开数
     sed -i '/^\*\ *soft\ *nofile\ *[[:digit:]]*/d' /etc/security/limits.conf
     sed -i '/^\*\ *hard\ *nofile\ *[[:digit:]]*/d' /etc/security/limits.conf
     echo '* soft nofile 65536' >> /etc/security/limits.conf
@@ -206,8 +210,7 @@ vmess_qr_config(){
         "add": "${ip}",
         "port": "${PORT}",
         "id": "${UUID}",
-		"security": "aes-128-gcm",
-        "aid": "${alterID}",
+		"aid": "${alterID}",
         "net": "kcp",
         "type": "none",
         "host": "",
@@ -231,7 +234,7 @@ show_information(){
     echo -e "${Red} 端口（port）：${Font} ${PORT} " >>./v2ray_info.txt
     echo -e "${Red} 用户id（UUID）：${Font} ${UUID}" >>./v2ray_info.txt
     echo -e "${Red} 额外id（alterId）：${Font} ${alterID}" >>./v2ray_info.txt
-    echo -e "${Red} 加密方式（security）：${Font} aes-128-gcm " >>./v2ray_info.txt
+    echo -e "${Red} 加密方式（security）：${Font} auto " >>./v2ray_info.txt
     echo -e "${Red} 传输协议（network）：${Font} kcp " >>./v2ray_info.txt
     echo -e "${Red} 伪装类型（type）：${Font} none " >>./v2ray_info.txt
     echo -e "${Red} 路径（不要落下/）：${Font}  " >>./v2ray_info.txt
