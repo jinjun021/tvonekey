@@ -226,7 +226,7 @@ show_information(){
     cd ~
 
     echo -e "${OK} ${Green} V2ray+mKCP 安装成功" >./v2ray_info.txt
-    echo -e "${Red} V2ray 配置信息 ${Font}" >>./v2ray_info.txt
+    echo -e "${Red} V2ray+mKCP配置信息 ${Font}" >>./v2ray_info.txt
     echo -e "${Red} 地址（address）:${Font} ${ip} " >>./v2ray_info.txt
     echo -e "${Red} 端口（port）：${Font} ${PORT} " >>./v2ray_info.txt
     echo -e "${Red} 用户id（UUID）：${Font} ${UUID}" >>./v2ray_info.txt
@@ -248,7 +248,7 @@ main(){
     
     dependency_install
     basic_optimization
-       
+    get_ip  
     v2ray_install
         
     v2ray_conf_add
