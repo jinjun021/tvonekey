@@ -52,17 +52,23 @@ apt-get -y install unzip zip wget curl  nano sudo ufw socat ntp ntpdate gcc git
 
 bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
 
+
+## 查看客户端配置信息
+
+cat ./v2ray_info.txt
+
 ### 启动方式
 
 启动 V2ray：`systemctl start v2ray`
 
 停止 V2ray：`systemctl stop v2ray`
 
+狀態 V2ray：systemctl status v2ray
 
 
 V2ray 服务端配置：`/etc/v2ray/config.json`
 
-V2ray 客户端配置: `执行安装时所在目录下的 v2ray_info.txt`
+V2ray 客户端配置: cat ./v2ray_info.txt
 
 
 
