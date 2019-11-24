@@ -1,4 +1,4 @@
-##V2一鍵mKCP安裝極速版
+##V2一鍵mKCP安裝純净極速版
 
 bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
 
