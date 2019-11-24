@@ -38,6 +38,18 @@
 
 #bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
 
+
+
+
+
+## USER DATA安裝
+
+#!/bin/bash
+
+apt-get -y update
+apt-get -y install unzip zip wget curl  nano sudo ufw socat ntp ntpdate gcc git
+bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
+
 ### 启动方式
 
 启动 V2ray：`systemctl start v2ray`
