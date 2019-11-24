@@ -1,3 +1,6 @@
+##V2一鍵mKCP安裝極速版
+
+bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
 
 ## Debian10常用软件包
    root用户下安装
