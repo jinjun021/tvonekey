@@ -107,8 +107,7 @@ dependency_install(){
 
 }
 basic_optimization(){
-    # BBR
-	
+    # BBR	
 	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
     echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 	sysctl -p
@@ -134,7 +133,7 @@ get_ip() {
 }
 modify_port_UUID(){
     
-	PORT=$(shuf -i20001-65535 -n1)
+	PORT=$(shuf -i10001-50001 -n1)
     UUID=$(cat /proc/sys/kernel/random/uuid)
 	alterID=$(shuf -i1-100 -n1)
     sed -i "/\"port\"/c  \    \"port\":${PORT}," ${v2ray_conf}
