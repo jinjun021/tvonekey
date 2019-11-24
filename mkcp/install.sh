@@ -124,7 +124,7 @@ basic_optimization(){
 }
 
 modify_port_UUID(){
-    let PORT=$RANDOM+10000
+    PORT=$(shuf -i20001-65535 -n1)
     UUID=$(cat /proc/sys/kernel/random/uuid)
 	alterID=$(shuf -i1-100 -n1)
     sed -i "/\"port\"/c  \    \"port\":${PORT}," ${v2ray_conf}
@@ -219,17 +219,17 @@ show_information(){
     clear
     cd ~
 
-    echo -e "${OK} ${Green} V2ray+ws+tls 安装成功" >./v2ray_info.txt
+    echo -e "${OK} ${Green} V2ray+mKCP 安装成功" >./v2ray_info.txt
     echo -e "${Red} V2ray 配置信息 ${Font}" >>./v2ray_info.txt
     echo -e "${Red} 地址（address）:${Font} ${domain} " >>./v2ray_info.txt
     echo -e "${Red} 端口（port）：${Font} ${port} " >>./v2ray_info.txt
     echo -e "${Red} 用户id（UUID）：${Font} ${UUID}" >>./v2ray_info.txt
     echo -e "${Red} 额外id（alterId）：${Font} ${alterID}" >>./v2ray_info.txt
     echo -e "${Red} 加密方式（security）：${Font} 自适应 " >>./v2ray_info.txt
-    echo -e "${Red} 传输协议（network）：${Font} ws " >>./v2ray_info.txt
+    echo -e "${Red} 传输协议（network）：${Font} kcp " >>./v2ray_info.txt
     echo -e "${Red} 伪装类型（type）：${Font} none " >>./v2ray_info.txt
-    echo -e "${Red} 路径（不要落下/）：${Font} /${camouflage}/ " >>./v2ray_info.txt
-    echo -e "${Red} 底层传输安全：${Font} tls " >>./v2ray_info.txt
+    echo -e "${Red} 路径（不要落下/）：${Font}  " >>./v2ray_info.txt
+    echo -e "${Red} 底层传输安全：${Font} " >>./v2ray_info.txt
     vmess_qr_config
     cat ./v2ray_info.txt
 
