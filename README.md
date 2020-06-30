@@ -1,4 +1,12 @@
-##V2一鍵mKCP安裝純净極速版
+## iptable反扫描，IP拉黑,反攻击脚本，参考版，具体自用请自己依据自身修改。
+
+提前安装并启用iptables，
+
+编辑 nano /root/iptablescript.sh
+
+执行 sh /root/iptablescript.sh 
+
+## V2一鍵mKCP安裝純净極速版
 
 bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
 
