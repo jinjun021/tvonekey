@@ -1,5 +1,5 @@
 
-## V2一鍵mKCP安裝純净極速版
+## V2一鍵mKCP安裝純净極速版+BBR+iptables安全代码
 加了强化VPS安全的iptable规则代码，反扫描，拉黑IP,10个月，反攻击；
 
 bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
