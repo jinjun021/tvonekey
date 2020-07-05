@@ -5,12 +5,12 @@
 bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
 
 ## Debian10常用软件包
-   root用户下安装
+   root用户下安装,如果用iptables代码，请关闭防火墙ufw
 
 #apt-get -y update && apt-get -y install unzip zip wget curl mc nano sudo socat ntp ntpdate gcc git
 
 ## CentOS8常用软件包
-   root用户下安装
+   root用户下安装，如果用iptables代码，请关闭防火墙firewalld
 
 #yum -y update && yum -y install unzip zip wget nano sudo curl  redhat-lsb epel-release socat gcc git
 
