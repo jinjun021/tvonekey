@@ -7,12 +7,12 @@ bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp
 ## Debian10常用软件包
    root用户下安装
 
-#apt-get -y update && apt-get -y install unzip zip wget curl mc nano sudo ufw socat ntp ntpdate gcc git
+#apt-get -y update && apt-get -y install unzip zip wget curl mc nano sudo socat ntp ntpdate gcc git
 
 ## CentOS8常用软件包
    root用户下安装
 
-#yum -y update && yum -y install unzip zip wget nano sudo curl firewalld redhat-lsb epel-release socat gcc git
+#yum -y update && yum -y install unzip zip wget nano sudo curl  redhat-lsb epel-release socat gcc git
 
 ## 加速優化（效果咋樣，見仁見智）
 原版BBR加速
