@@ -162,7 +162,8 @@ v2ray_install(){
         exit 4
     fi
     # 清除临时文件
-    rm -rf /root/v2ray
+    # cd /root/v2ray
+    # rm -rf /root/v2ray
 }
 
 
@@ -171,6 +172,7 @@ v2ray_install(){
 v2ray_conf_add(){
     cd /etc/v2ray
     wget https://raw.githubusercontent.com/jinjun021/tvonekey/master/mkcp/config.json -O config.json
+    
 modify_port_UUID
 judge "V2ray 配置修改"
 }
