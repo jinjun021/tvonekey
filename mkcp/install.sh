@@ -144,24 +144,18 @@ modify_port_UUID(){
 
 
 v2ray_install(){
-   if [[ -d /root/v2ray ]]; then
+    if [[ -d /root/v2ray ]];then
         rm -rf /root/v2ray
     fi
-    if [[ -d /etc/v2ray ]]; then
+    if [[ -d /etc/v2ray ]];then
         rm -rf /etc/v2ray
     fi
-    mkdir -p /root/v2ray
-    cd /root/v2ray || exit
-   ### wget -N --no-check-certificate https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/${github_branch}/v2ray.sh
+    mkdir -p /root/v2ray && cd /root/v2ray
+    # wget  --no-check-certificate https://install.direct/go.sh
+    wget  --no-check-certificate https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
     
-    wget  -N --no-check-certificate https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
-
-wget  -N --no-check-certificate https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh
-
-    if [[ -f v2ray.sh ]]; then
-        rm -rf $v2ray_systemd_file
-        systemctl daemon-reload
-       	bash install-release.sh --force
+    if [[ -f install-release.sh ]];then
+        bash install-release.sh --force
         judge "安装 V2ray"
     else
         echo -e "${Error} ${RedBG} V2ray 安装文件下载失败，请检查下载地址是否可用 ${Font}"
@@ -177,7 +171,7 @@ wget  -N --no-check-certificate https://raw.githubusercontent.com/v2fly/fhs-inst
 v2ray_conf_add(){
     cd /etc/v2ray
     wget https://raw.githubusercontent.com/jinjun021/tvonekey/master/mkcp/config.json -O config.json
-###. modify_port_UUID
+modify_port_UUID
 judge "V2ray 配置修改"
 }
 
