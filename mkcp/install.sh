@@ -177,7 +177,7 @@ bash install-release.sh --force
 
 v2ray_conf_add(){
     cd /etc/v2ray
-    wget https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/config.json -O config.json
+    wget https://raw.githubusercontent.com//tvonekey/master/mkcp/config.json -O config.json
 ###. modify_port_UUID
 judge "V2ray 配置修改"
 }
