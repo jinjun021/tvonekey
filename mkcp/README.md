@@ -97,3 +97,5 @@ chmod 777 【文件路径】
 生成密钥：ssh-keygen -t rsa -C “abc@abc.com”
 拷贝密钥：pbcopy < ~/.ssh/id_rsa.pub
 
+### 进入root
+
