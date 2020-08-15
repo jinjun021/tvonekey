@@ -36,7 +36,7 @@
 
 ## 一鍵安裝
 
-#bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/jinjun021/tvonekey/master/mkcp/install.sh)
 
 
 
@@ -50,7 +50,8 @@ apt-get -y update
 
 apt-get -y install unzip zip wget curl  nano sudo ufw socat ntp ntpdate gcc git
 
-bash <(curl -Ls https://raw.githubusercontent.com/mikewubox/tvonekey/master/mkcp/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/jinjun021/tvonekey/master/mkcp/install.sh)
+
 
 
 ## 查看客户端配置信息
@@ -93,6 +94,6 @@ apt-get install vim命令即可.
 chmod 777 【文件路径】
 
 ### 密钥 
-生成密钥：ssh-keygen -t rsa -C “jim5000@pm.me”
+生成密钥：ssh-keygen -t rsa -C “abc@abc.com”
 拷贝密钥：pbcopy < ~/.ssh/id_rsa.pub
 
