@@ -152,8 +152,8 @@ v2ray_install(){
     fi
     mkdir -p /root/v2ray
     cd /root/v2ray || exit
-    wget -N --no-check-certificate https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/v2ray.sh
-    
+    wget -N --no-check-certificate https://raw.githubusercontent.com/jinjun021/tvonekey/master/mkcp/v2ray.sh
+        
     if [[ -f v2ray.sh ]]; then
         bash v2ray.sh --force
         judge "安装 V2ray"
