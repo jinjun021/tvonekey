@@ -89,4 +89,10 @@ V2ray 客户端配置: cat ./v2ray_info.txt
 
 apt-get install vim命令即可.
 
+### 修改权限
+chmod 777 【文件路径】
+
+### 密钥 
+生成密钥：ssh-keygen -t rsa -C “jim5000@pm.me”
+拷贝密钥：pbcopy < ~/.ssh/id_rsa.pub
 
